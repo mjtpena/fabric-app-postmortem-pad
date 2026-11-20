@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+@import '@x10/shared/styles.css';
+@source "../../../shared/src";
+
+/*
+ * Severity colour system (strong, redundant with amplitude on the seismograph and with the SEV label everywhere).
+ * Solid fills use a contrast text that passes AA on them; soft and text steps come from the same named ramps.
+ */
+:root {
+  --sev1: var(--red-9);
+  --sev1-fg: var(--red-contrast);
+  --sev1-text: var(--red-11);
+  --sev1-soft: var(--red-3);
+  --sev2: color-mix(in oklab, var(--ember-9) 45%, var(--amber-9));
+  --sev2-fg: var(--amber-contrast);
+  --sev2-text: var(--ember-11);
+  --sev2-soft: var(--ember-3);
+  --sev3: var(--gold-9);
+  --sev3-fg: var(--gold-contrast);
+  --sev3-text: var(--gold-11);
+  --sev3-soft: var(--gold-3);
+  --sev4: color-mix(in oklab, var(--blue-9) 22%, var(--gray-9));
+  --sev4-fg: var(--gray-12);
+  --sev4-text: var(--gray-11);
+  --sev4-soft: var(--gray-3);
+
+  /* Seismograph paper: warm drum paper in light, graphite in dark (from the world tokens). */
+  --paper: var(--world-sky-2);
+  --paper-2: color-mix(in oklab, var(--world-sky-2) 70%, var(--world-sky));
+  --paper-ink: var(--world-ink);
+  --paper-ink-muted: var(--world-ink-muted);
+  --paper-grid: color-mix(in oklab, var(--world-ink) 4%, transparent);
+  --paper-grid-strong: color-mix(in oklab, var(--world-ink) 12%, transparent);
+}
+
+/* The drum draws itself left to right on first paint. */
+@keyframes pm-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.pm-reveal {
+  animation: pm-reveal 1100ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes pm-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+.pm-blink {
+  animation: pm-blink 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pm-reveal,
+  .pm-blink {
+    animation: none;
+  }
+}
+
+/* Tremor hit areas: focus ring drawn by the trace itself, so suppress the default box. */
+.pm-tremor {
+  cursor: pointer;
+  outline: none;
+}
+.pm-tremor:focus-visible .pm-hit {
+  stroke: var(--accent-9);
+  stroke-width: 2;
+  stroke-dasharray: 3 2;
+}
+.pm-trace {
+  transition:
+    stroke 200ms cubic-bezier(0.2, 0, 0, 1),
+    stroke-width 160ms cubic-bezier(0.2, 0, 0, 1);
+}
+.pm-track {
+  transition: opacity 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Words the blameless prompt flags, highlighted in place. */
+.pm-flag {
+  background: color-mix(in oklab, var(--accent-9) 22%, transparent);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 2px;
+  text-decoration: underline wavy color-mix(in oklab, var(--accent-10) 80%, transparent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* Black box hatch for the undetected phase. */
+.pm-hatch {
+  background-image: repeating-linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--hatch, var(--sev1)) 16%, transparent) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+/*
+ * Print: the incident log (StagePage list view) prints as a plain document. The immersive shell fixes its height
+ * and hides overflow on desktop; release that so every row prints, and drop the on-screen breadcrumb.
+ */
+@media print {
+  div:has(> main#main) {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding-bottom: 0 !important;
+  }
+  main#main {
+    display: block !important;
+  }
+  .x-stage-root nav[aria-label='Breadcrumb'] {
+    display: none !important;
+  }
+  .x-table thead {
+    display: table-header-group;
+  }
+  .x-table tr {
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,119 @@
+1
+00:00:03,212 --> 00:00:07,784
+This is Postmortem Pad, a Fabric App where every pipeline failure of
+
+2
+00:00:07,784 --> 00:00:11,482
+the last ninety days is a tremor on its system’s trace.
+
+3
+00:00:11,932 --> 00:00:15,156
+Height is severity, the ring is time to resolve,
+
+4
+00:00:15,156 --> 00:00:18,582
+and open incidents keep trembling up to the stylus.
+
+5
+00:00:19,546 --> 00:00:23,039
+Switch the lens to category and one pattern jumps
+
+6
+00:00:23,039 --> 00:00:26,746
+out: orders ingest keeps breaking on schema changes.
+
+7
+00:00:27,196 --> 00:00:31,586
+The time to resolve lens shows which recoveries dragged on.
+
+8
+00:00:32,388 --> 00:00:36,276
+Today ranks what needs attention now: the most severe
+
+9
+00:00:36,276 --> 00:00:40,238
+open incident, the aging ones, and overdue follow-ups.
+
+10
+00:00:40,688 --> 00:00:43,038
+One click focuses the drum on it and
+
+11
+00:00:43,038 --> 00:00:45,518
+switches to the lens that explains it.
+
+12
+00:00:46,319 --> 00:00:49,628
+Viewing as an engineer dims everything that is
+
+13
+00:00:49,628 --> 00:00:52,649
+not mine and puts my own follow-ups first.
+
+14
+00:00:53,461 --> 00:00:56,199
+Each incident opens as a black box: started,
+
+15
+00:00:56,199 --> 00:00:59,061
+detected, now, and the time between each mark.
+
+16
+00:00:59,511 --> 00:01:02,297
+The transcript highlights wording that points at a
+
+17
+00:01:02,297 --> 00:01:04,971
+person, with a blameless prompt right beside it.
+
+18
+00:01:05,776 --> 00:01:08,670
+To resolve it I give three facts: when it
+
+19
+00:01:08,670 --> 00:01:11,846
+was fixed, why it happened and what fixed it.
+
+20
+00:01:12,296 --> 00:01:15,294
+The category checklist on its own does not count as
+
+21
+00:01:15,294 --> 00:01:17,646
+a root cause, so the app stops me there.
+
+22
+00:01:18,096 --> 00:01:20,779
+With a real root cause the recorder stops,
+
+23
+00:01:20,779 --> 00:01:23,206
+and the tremor rings down on the drum.
+
+24
+00:01:24,017 --> 00:01:30,497
+Follow-ups are aftershocks: small spikes after a tremor, red when they are overdue.
+
+25
+00:01:30,947 --> 00:01:35,081
+The aftershocks page groups them by owner, overdue first,
+
+26
+00:01:35,081 --> 00:01:38,127
+and ticking one off is instant, with undo.
+
+27
+00:01:38,940 --> 00:01:42,630
+Fault lines shows the patterns: schema changes lead,
+
+28
+00:01:42,630 --> 00:01:45,610
+and Monday mornings are when things break.
+
+29
+00:01:46,411 --> 00:01:50,304
+Log it in two minutes, keep the wording blameless, and
+
+30
+00:01:50,304 --> 00:01:53,621
+let the seismograph show you what to fix next.
