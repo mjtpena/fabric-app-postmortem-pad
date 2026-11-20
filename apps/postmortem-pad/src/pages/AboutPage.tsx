@@ -115,7 +115,7 @@ export function AboutPage() {
           Sign-in uses Fabric (Microsoft Entra ID). Everyone who can open the app can read every incident, so write for the whole team and
           keep personal details out. The app stores your display name and email to show who reported an incident.
         </p>
-        <p className="m-0 mt-3 text-xs text-faint">Built by Datachain Consulting for AI @Work. Runs on Microsoft Fabric Apps (preview).</p>
+        <p className="m-0 mt-3 text-xs text-faint">Built by Datachain Consulting for AI @Work. Runs on Microsoft Fabric Apps.</p>
       </Block>
     </div>
   );

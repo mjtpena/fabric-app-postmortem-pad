@@ -2,7 +2,7 @@
 
 A two-minute form for logging a pipeline or notebook failure, a gentle nudge toward blameless wording, and trend charts
 that show which causes keep coming back. Data engineers log and edit incidents, leads review them, and everyone signed in
-can read them. It is a Microsoft Fabric App (preview): a React front end on Fabric static hosting, a Fabric SQL database
+can read them. It is a Microsoft Fabric App: a React front end on Fabric static hosting, a Fabric SQL database
 with a generated GraphQL API, and Fabric (Microsoft Entra ID) sign-in.
 
 ![The seismograph: six systems' traces over 90 days, tremors coloured by severity, open incidents trembling up to the stylus, and the Today panel](docs/screenshot.png)
@@ -30,7 +30,7 @@ Demo video (about 2 minutes, AI-generated narration, captions burned in): [demo/
 
 ## 1. Prerequisites
 
-- The **Fabric Apps** workload enabled for your tenant (preview), and a Fabric workspace on a capacity.
+- The **Fabric Apps** workload enabled for your tenant, and a Fabric workspace on a capacity.
 - **Edit** (Contributor or higher) permission on that workspace to deploy.
 - Node.js 20 or later.
 - Users need access to the app item. Workspace members have it by default; others must be granted access.

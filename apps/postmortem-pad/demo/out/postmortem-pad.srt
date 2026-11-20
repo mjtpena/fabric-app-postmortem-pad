@@ -1,119 +1,119 @@
 1
-00:00:03,212 --> 00:00:07,784
+00:00:03,205 --> 00:00:07,777
 This is Postmortem Pad, a Fabric App where every pipeline failure of
 
 2
-00:00:07,784 --> 00:00:11,482
+00:00:07,777 --> 00:00:11,475
 the last ninety days is a tremor on its system’s trace.
 
 3
-00:00:11,932 --> 00:00:15,156
+00:00:11,925 --> 00:00:15,149
 Height is severity, the ring is time to resolve,
 
 4
-00:00:15,156 --> 00:00:18,582
+00:00:15,149 --> 00:00:18,575
 and open incidents keep trembling up to the stylus.
 
 5
-00:00:19,546 --> 00:00:23,039
+00:00:19,585 --> 00:00:23,078
 Switch the lens to category and one pattern jumps
 
 6
-00:00:23,039 --> 00:00:26,746
+00:00:23,078 --> 00:00:26,785
 out: orders ingest keeps breaking on schema changes.
 
 7
-00:00:27,196 --> 00:00:31,586
+00:00:27,235 --> 00:00:31,625
 The time to resolve lens shows which recoveries dragged on.
 
 8
-00:00:32,388 --> 00:00:36,276
+00:00:32,437 --> 00:00:36,325
 Today ranks what needs attention now: the most severe
 
 9
-00:00:36,276 --> 00:00:40,238
+00:00:36,325 --> 00:00:40,287
 open incident, the aging ones, and overdue follow-ups.
 
 10
-00:00:40,688 --> 00:00:43,038
+00:00:40,737 --> 00:00:43,087
 One click focuses the drum on it and
 
 11
-00:00:43,038 --> 00:00:45,518
+00:00:43,087 --> 00:00:45,567
 switches to the lens that explains it.
 
 12
-00:00:46,319 --> 00:00:49,628
+00:00:46,367 --> 00:00:49,676
 Viewing as an engineer dims everything that is
 
 13
-00:00:49,628 --> 00:00:52,649
+00:00:49,676 --> 00:00:52,697
 not mine and puts my own follow-ups first.
 
 14
-00:00:53,461 --> 00:00:56,199
+00:00:53,537 --> 00:00:56,275
 Each incident opens as a black box: started,
 
 15
-00:00:56,199 --> 00:00:59,061
+00:00:56,275 --> 00:00:59,137
 detected, now, and the time between each mark.
 
 16
-00:00:59,511 --> 00:01:02,297
+00:00:59,587 --> 00:01:02,373
 The transcript highlights wording that points at a
 
 17
-00:01:02,297 --> 00:01:04,971
+00:01:02,373 --> 00:01:05,047
 person, with a blameless prompt right beside it.
 
 18
-00:01:05,776 --> 00:01:08,670
+00:01:05,855 --> 00:01:08,749
 To resolve it I give three facts: when it
 
 19
-00:01:08,670 --> 00:01:11,846
+00:01:08,749 --> 00:01:11,925
 was fixed, why it happened and what fixed it.
 
 20
-00:01:12,296 --> 00:01:15,294
+00:01:12,375 --> 00:01:15,373
 The category checklist on its own does not count as
 
 21
-00:01:15,294 --> 00:01:17,646
+00:01:15,373 --> 00:01:17,725
 a root cause, so the app stops me there.
 
 22
-00:01:18,096 --> 00:01:20,779
+00:01:18,175 --> 00:01:20,858
 With a real root cause the recorder stops,
 
 23
-00:01:20,779 --> 00:01:23,206
+00:01:20,858 --> 00:01:23,285
 and the tremor rings down on the drum.
 
 24
-00:01:24,017 --> 00:01:30,497
+00:01:24,092 --> 00:01:30,572
 Follow-ups are aftershocks: small spikes after a tremor, red when they are overdue.
 
 25
-00:01:30,947 --> 00:01:35,081
+00:01:31,022 --> 00:01:35,156
 The aftershocks page groups them by owner, overdue first,
 
 26
-00:01:35,081 --> 00:01:38,127
+00:01:35,156 --> 00:01:38,202
 and ticking one off is instant, with undo.
 
 27
-00:01:38,940 --> 00:01:42,630
+00:01:39,016 --> 00:01:42,706
 Fault lines shows the patterns: schema changes lead,
 
 28
-00:01:42,630 --> 00:01:45,610
+00:01:42,706 --> 00:01:45,686
 and Monday mornings are when things break.
 
 29
-00:01:46,411 --> 00:01:50,304
+00:01:46,499 --> 00:01:50,392
 Log it in two minutes, keep the wording blameless, and
 
 30
-00:01:50,304 --> 00:01:53,621
+00:01:50,392 --> 00:01:53,709
 let the seismograph show you what to fix next.
